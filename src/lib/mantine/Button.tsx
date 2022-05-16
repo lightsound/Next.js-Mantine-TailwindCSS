@@ -2,9 +2,6 @@ import type { ButtonProps } from "@mantine/core";
 import { cloneElement, forwardRef } from "react";
 import { Button as MantineButton } from "@mantine/core";
 
-/**
- * @package
- */
 export const Button = forwardRef<
   HTMLButtonElement,
   ButtonProps<"button" | "a"> & { dent?: boolean }

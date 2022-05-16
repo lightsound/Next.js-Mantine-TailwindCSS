@@ -1,11 +1,5 @@
 import type { NextPage } from "next";
-import { Button } from "src/lib/mantine/Button";
-import { useMediaQuery } from "src/lib/mantine/useMediaQuery";
-import { useViewportSize } from "src/lib/mantine/useViewportSize";
-
-const handleClick = () => {
-  console.log("Hello!");
-};
+import { Button, useMediaQuery, useViewportSize } from "src/lib/mantine";
 
 const Home: NextPage = () => {
   const { width } = useViewportSize();
@@ -14,6 +8,10 @@ const Home: NextPage = () => {
   const largerThanMd = useMediaQuery("md");
   const largerThanLg = useMediaQuery("lg");
   const largerThanXl = useMediaQuery("xl");
+
+  const handleClick = () => {
+    console.log("Hello!");
+  };
 
   return (
     <div className="p-20">
